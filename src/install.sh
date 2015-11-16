@@ -24,9 +24,12 @@ export PATH=\"$PY3PATH:\$PATH\"" >> $BASH_RC
 
 # additional packages to install
 $CONDA3 install --yes seaborn
+$PIP3 install —yes credis
+$PIP3 install —yes python-Levenshtein
+$PIP3 install —yes fuzzywuzzy
+$PIP3 install —yes tldextract
 
-# python 2 environment
-$CONDA3 create --yes -n python2 python=2 pip ipython pyzmq
+
 
 # ipython setup
 $PY3PATH/ipython profile create default --ipython-dir $HOME/.ipython
