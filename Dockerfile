@@ -33,12 +33,9 @@ RUN  apt-get --purge -y autoremove wget && \
 	cp /tmp/matplotlib_nb_init.py /home/condauser/.ipython/profile_default/startup && \
 	chown condauser:condauser /home/condauser -R
 
-# Set persistent environment variables for python3 and python2
-ENV PY2PATH=/home/condauser/anaconda3/envs/python2/bin
+# Set persistent environment variables for python3
 ENV PY3PATH=/home/condauser/anaconda3/bin
 
-# Install the python2 ipython kernel
-RUN $PY2PATH/python $PY2PATH/ipython kernelspec install-self
 
 # Setup our environment for running the ipython notebook
 # Setting user here makes sure ipython notebook is run as user, not root
