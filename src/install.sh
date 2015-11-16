@@ -4,15 +4,10 @@ BASH_RC=/home/condauser/.bashrc
 PREFIX=/home/condauser/anaconda3
 
 PY3PATH=$PREFIX/bin
-PY2PATH=$PREFIX/envs/python2/bin
 
 # python 3
 CONDA3=$PY3PATH/conda
 PIP3=$PY3PATH/pip
-
-# python 2
-CONDA2=$PY2PATH/conda
-PIP2=$PY2PATH/pip
 
 # Install and remove file
 bash $HOME/Anaconda.sh -b
@@ -24,10 +19,10 @@ export PATH=\"$PY3PATH:\$PATH\"" >> $BASH_RC
 
 # additional packages to install
 $CONDA3 install --yes seaborn
-$PIP3 install —yes credis
-$PIP3 install —yes python-Levenshtein
-$PIP3 install —yes fuzzywuzzy
-$PIP3 install —yes tldextract
+$PIP3 install credis
+$PIP3 install python-Levenshtein
+$PIP3 install fuzzywuzzy
+$PIP3 install tldextract
 
 
 
